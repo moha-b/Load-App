@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@+id/btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            app:layout_constraintTop_toBottomOf="@id/textView2"
+            app:layout_constraintVertical_bias="0.786"
+            app:layout_constraintHorizontal_bias="0.4" />
+        <Constraint
+            android:id="@+id/textView1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_editor_absoluteY="27dp" />
+        <Constraint
+            android:id="@+id/Detail_FileName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintStart_toEndOf="@+id/textView1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_editor_absoluteY="27dp"
+            app:layout_constraintHorizontal_bias="0.0" />
+        <Constraint
+            app:layout_editor_absoluteY="149dp"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:id="@+id/textView2"
+            app:layout_constraintEnd_toStartOf="@+id/Detail_Status"
+            android:layout_marginEnd="64dp"
+            android:layout_marginRight="64dp" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@id/btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+        />
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start"
+        app:autoTransition="animateToEnd"
+        app:duration="1700"
+        />
+</MotionScene>
